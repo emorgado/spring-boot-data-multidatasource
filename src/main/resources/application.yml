@@ -1,0 +1,22 @@
+spring:
+    jpa:
+        hibernate:
+            ddl-auto: none
+    datasources:
+        dsFinancial: 
+            url: jdbc:mysql://localhost/sbdmultidatasource_financial?useSSL=false
+            username: root
+            password: morgado
+            driverClassName: com.mysql.jdbc.Driver
+            validation-query: select 1
+        dsFactory:    
+            url: jdbc:mysql://localhost/sbdmultidatasource_factory?useSSL=false
+            username: root
+            password: morgado
+            driverClassName: com.mysql.jdbc.Driver
+            validation-query: select 1
+    data:
+        rest:
+          base-path: /api
+flyway:
+    enabled: false
